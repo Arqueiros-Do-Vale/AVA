@@ -1,7 +1,9 @@
 'use client';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function LoginInstrutorPage() {
+  const router = useRouter();
   const [instrutorSelecionado, setInstrutorSelecionado] = useState('Alexandre Borrego');
   const [pin, setPin] = useState('');
   const [carregando, setCarregando] = useState(false);
@@ -19,9 +21,9 @@ export default function LoginInstrutorPage() {
     }
     setCarregando(true);
     setTimeout(() => {
-      alert(`Bem-vindo ao CT AVA, ${instrutorSelecionado}!`);
-      setCarregando(false);
-    }, 800);
+      // Redireciona para a página da aula 18 após o login
+      router.push('/instrutor/aula/18');
+    }, 500);
   };
 
   return (
