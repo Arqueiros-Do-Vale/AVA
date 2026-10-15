@@ -6,7 +6,8 @@ export default function ConfigAdminPage() {
   const [novoPin, setNovoPin] = useState('1234');
   const [instrutores, setInstrutores] = useState([
     { id: '1', nome: 'Alexandre Borrego', pin: '****', status: 'ativo' },
-    { id: '2', nome: 'Ana Paula Borrego', pin: '****', status: 'ativo' }
+    { id: '2', nome: 'Ana Paula Borrego', pin: '****', status: 'ativo' },
+    { id: '3', nome: 'Instrutor Teste', pin: '****', status: 'ativo' }
   ]);
 
   const handleSalvarInstrutor = (e: React.FormEvent) => {
